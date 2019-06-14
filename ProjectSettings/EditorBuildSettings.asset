@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Rappi_MainMenu.unity
+    guid: aa3d47ec23499a14d8a2875f8ba5e6d4
+  - enabled: 1
+    path: Assets/Scenes/Rappi_Game.unity
+    guid: 0758d1c2ad6406940acb85194b02610d
+  m_configObjects: {}
