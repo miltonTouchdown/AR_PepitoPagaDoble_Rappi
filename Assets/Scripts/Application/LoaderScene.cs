@@ -39,7 +39,7 @@ public class LoaderScene : MonoBehaviour {
     {
         loadingUI.SetActive(true);
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(id);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(id, LoadSceneMode.Single);
 
         while (!asyncLoad.isDone)
         {
