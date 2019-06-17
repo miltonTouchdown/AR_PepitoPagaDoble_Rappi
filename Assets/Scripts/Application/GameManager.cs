@@ -75,6 +75,12 @@ public class GameManager : MonoBehaviour
     {
         _musicControl = FindObjectOfType<MusicControl>();
         _loaderScene = FindObjectOfType<LoaderScene>();
+
+        _loaderScene.ShowLoadScreen(.5f, () =>
+        {
+            // Inicializar por primera vez main menu
+            FindObjectOfType<RappiMainMenu>().InitMenu();
+        });       
     }
 
     private void Update()

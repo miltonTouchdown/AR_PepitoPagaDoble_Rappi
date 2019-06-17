@@ -22,6 +22,11 @@ public class RappiMainMenu : MonoBehaviour
 
     void Start ()
     {
+        InitMenu();
+    }
+
+    public void InitMenu()
+    {
         _musicControl = GameManager.Instance.GetMusicControl();
 
         imageNoSound.SetActive(!_musicControl.hasAudio);

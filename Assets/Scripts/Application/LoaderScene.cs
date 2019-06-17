@@ -15,6 +15,21 @@ public class LoaderScene : MonoBehaviour {
 		
 	}
 
+    public void ShowLoadScreen(float time, OnFinishLoad onFinish = null)
+    {
+        loadingUI.SetActive(true);
+
+        LeanTween.delayedCall(time, () =>
+        {
+            loadingUI.SetActive(false);
+
+            if(onFinish != null)
+            {
+                onFinish();
+            }
+        });
+    }
+
     public void LoadScene(int id)
     {
         StartCoroutine(LoadAsyncScene(id));
@@ -36,4 +51,8 @@ public class LoaderScene : MonoBehaviour {
             loadingUI.SetActive(false);
         });
     }
+
+    public delegate void OnFinishLoad();
+    public static event OnFinishLoad onFinishLoad;
+
 }

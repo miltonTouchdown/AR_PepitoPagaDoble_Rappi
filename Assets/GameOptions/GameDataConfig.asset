@@ -17,7 +17,7 @@ MonoBehaviour:
   - levelType: 1
     valueLvl: 0.45
   - levelType: 2
-    valueLvl: 0.37
+    valueLvl: 0.27
   velSingleShuffle:
   - 1.5
   - 1.5
