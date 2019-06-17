@@ -56,7 +56,7 @@ public class MusicControl : MonoBehaviour
 
     public void setAudio(bool value)
     {
-        hasAudio = value;
+        this.hasAudio = value;
 
         float currVol = (value) ? _masterVolume : -80f;
 

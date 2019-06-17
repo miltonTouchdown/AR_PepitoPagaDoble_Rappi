@@ -8,6 +8,7 @@ public class RappiMainMenu : MonoBehaviour
 {
     public GameObject panelListPrize;
     public Button bttStart;
+    public GameObject imageNoSound;
 
     [Header("Prize Selector")]
     public Image imagePrize;
@@ -21,7 +22,9 @@ public class RappiMainMenu : MonoBehaviour
 
     void Start ()
     {
-        _musicControl = FindObjectOfType<MusicControl>();
+        _musicControl = GameManager.Instance.GetMusicControl();
+
+        imageNoSound.SetActive(!_musicControl.hasAudio);
 
         if (GameManager.Instance.currPrize == PrizeType.None)
             bttStart.interactable = false;
@@ -85,7 +88,17 @@ public class RappiMainMenu : MonoBehaviour
 
     public void SetAudio(bool value)
     {
-        _musicControl.setAudio(value);
+        //_musicControl.setAudio(value);
+    }
+
+    public void SetAudio()
+    {
+        bool HasAudio = !_musicControl.hasAudio;
+
+        _musicControl.setAudio(HasAudio);
+
+        // Activar/desactivar imagen como feedback
+        imageNoSound.SetActive(!HasAudio);
     }
 
     public void CloseApplication()

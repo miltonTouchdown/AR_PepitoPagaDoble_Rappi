@@ -29,8 +29,9 @@ public class ARRappiMenu : MonoBehaviour
 
     [Header("UI Sound")]
     public Button bttnSound;
+    public GameObject imageNoSound;
 
-    private MusicControl _musicControl;
+    public MusicControl _musicControl;
 
     [Header("Feedback Tracking")]
     public RectTransform imgSearchTarget;
@@ -38,7 +39,8 @@ public class ARRappiMenu : MonoBehaviour
 
     void Start ()
     {
-        _musicControl = FindObjectOfType<MusicControl>();
+        _musicControl = GameManager.Instance.GetMusicControl();
+        imageNoSound.SetActive(!_musicControl.hasAudio);
 
         particleCelebration.Stop(true);
 
@@ -183,6 +185,7 @@ public class ARRappiMenu : MonoBehaviour
 
         _musicControl.setAudio(HasAudio);
 
-        //TODO : Cambiar boton audio
+        // Activar/desactivar imagen como feedback
+        imageNoSound.SetActive(!HasAudio);
     }
 }

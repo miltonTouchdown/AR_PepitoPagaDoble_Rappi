@@ -311,6 +311,11 @@ public class GameManager : MonoBehaviour
         _loaderScene.LoadScene(idScene);
     }
 
+    public MusicControl GetMusicControl()
+    {
+        return _musicControl;
+    }
+
     /// <summary>
     /// Obtener Informacion de los modelos a cargar (nombre modelo, nombre archivo) de acuerdo
     /// al tipo de premio.
