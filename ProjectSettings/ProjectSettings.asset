@@ -17,7 +17,7 @@ PlayerSettings:
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
-  m_ShowUnitySplashScreen: 1
+  m_ShowUnitySplashScreen: 0
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 0.5
   m_SplashScreenAnimation: 0
@@ -904,7 +904,7 @@ PlayerSettings:
   apiCompatibilityLevel: 2
   cloudProjectId: 5d06e7ea-ba42-4cd1-a3c7-6ce226242a59
   projectName: Prueba_Barbones_23_05_2018
-  organizationId: maarancibia21
+  organizationId: trophiesar
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

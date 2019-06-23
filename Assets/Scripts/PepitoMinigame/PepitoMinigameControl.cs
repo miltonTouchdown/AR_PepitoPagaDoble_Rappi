@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class PepitoMinigameControl : MonoBehaviour
 {
@@ -161,7 +162,7 @@ public class PepitoMinigameControl : MonoBehaviour
             return;
 
         // Seleccionar contenedor
-        if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
+        if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began) && !EventSystem.current.IsPointerOverGameObject(0))
         {
             Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit hit;
