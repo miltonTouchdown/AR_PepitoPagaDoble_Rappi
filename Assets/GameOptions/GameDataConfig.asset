@@ -43,13 +43,13 @@ MonoBehaviour:
   - namePrize: tu premio
     nameFile:
     - GiftBox
-    iconPrize: {fileID: 21300000, guid: afd550514d1f0fd4e9445ede37b9d3f7, type: 3}
+    iconPrize: {fileID: 21300000, guid: 11b77f14cb9a51943a7b30aa0298bee4, type: 3}
     prizeType: 1
   - namePrize: "tus Rappi-Cr\xE9ditos"
     nameFile:
     - Ticket
     - Coin
-    iconPrize: {fileID: 21300000, guid: afd550514d1f0fd4e9445ede37b9d3f7, type: 3}
+    iconPrize: {fileID: 21300000, guid: 11b77f14cb9a51943a7b30aa0298bee4, type: 3}
     prizeType: 2
   feedbackGameOver:
   - IsWinner: 1

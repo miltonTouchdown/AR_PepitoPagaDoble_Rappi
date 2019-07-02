@@ -164,8 +164,8 @@ public class ARRappiMenu : MonoBehaviour
             // Reiniciar valores
             Image imgSearching = imgSearchTarget.GetComponent<Image>();
             imgSearching.color = new Color(imgSearching.color.r, imgSearching.color.g, imgSearching.color.b, 1f);
-            Text textChild = imgSearchTarget.GetComponentInChildren<Text>();
-            textChild.color = new Color(textChild.color.r, textChild.color.g, textChild.color.b, 1f);
+            //Text textChild = imgSearchTarget.GetComponentInChildren<Text>();
+            //textChild.color = new Color(textChild.color.r, textChild.color.g, textChild.color.b, 1f);
 
             // Activar interfaz
             //Image imgSearching = imgSearchTarget.GetComponent<Image>();

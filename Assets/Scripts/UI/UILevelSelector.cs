@@ -8,6 +8,10 @@ public class UILevelSelector : MonoBehaviour
     // Indican el nivel. La primera posicion indica menor nivel. Ultima posicion indica mayor nivel
     public Image[] lvlIndicators;
     public Color colorLevel = Color.yellow;
+    public Sprite starEnabled, starDisabled;
+
+    // Indica se utilizara imagen o color para resaltar la seleccion de nivel
+    public bool useColor = false;
 
 	void Start ()
     {
@@ -45,7 +49,10 @@ public class UILevelSelector : MonoBehaviour
     {
         for(int i = 0; i < lvlIndicators.Length; i++)
         {
-            lvlIndicators[i].color = (i <= lvl) ? colorLevel : Color.white;
+            if(useColor)
+                lvlIndicators[i].color = (i <= lvl) ? colorLevel : Color.white;
+            else
+                lvlIndicators[i].overrideSprite = (i <= lvl) ? starEnabled : starDisabled;
         }
     }
 }
